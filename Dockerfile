@@ -1,9 +1,9 @@
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:17-jre-jammy
 
-WORKDIR /app
+ARG JAR_FILE=target/paciente-service-0.0.1-SNAPSHOT.jar
 
-COPY target/*.jar app.jar
+COPY ${JAR_FILE} app_paciente.jar
 
-EXPOSE 8080
+EXPOSE 8081
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app_paciente.jar"]
