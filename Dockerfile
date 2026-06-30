@@ -15,4 +15,4 @@ COPY --from=build /app/target/paciente-service-0.0.1-SNAPSHOT.jar app_paciente.j
 
 EXPOSE 8081
 
-ENTRYPOINT ["java", "-jar", "app_paciente.jar"]pp_paciente.jar"]
+ENTRYPOINT ["java", "-jar", "app_paciente.jar"]
